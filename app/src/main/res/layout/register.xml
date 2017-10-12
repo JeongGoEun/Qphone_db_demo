@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+
+   >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background"
+        android:padding="10dp"
+        android:id="@+id/check_person"
+        android:layout_marginBottom="20dp"
+
+       >
+
+        <CheckBox
+            android:id="@+id/normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="일반"
+            />
+        <CheckBox
+            android:id="@+id/store"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="가게"
+            android:layout_marginLeft="50dp"
+            android:layout_toRightOf="@id/normal"/>
+
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background"
+        android:padding="10dp"
+        android:layout_below="@id/check_person"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/id_info"
+            android:orientation="horizontal"
+            android:weightSum="1">
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="아이디"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/idEdit"
+                android:layout_weight="1"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/idCheckBtn"
+                android:text="중복확인"/>
+        </LinearLayout>
+
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="비밀번호"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/pwEdit"
+            android:layout_below="@id/id_info"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="비밀번호 재확인"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/pwCheckEdit"
+            android:layout_below="@id/pwEdit"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="휴대전화번호"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/phoneEdit"
+            android:layout_below="@id/pwCheckEdit"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="이메일"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/emailEdit"
+            android:layout_below="@id/phoneEdit"/>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="회원가입"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/registerBtn"
+            android:layout_below="@id/emailEdit"
+           />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
